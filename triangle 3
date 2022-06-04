@@ -1,0 +1,28 @@
+import math
+a1 = int(float(input("Enter value of a1 \n")))
+b1 = int(float(input("Enter value of b1 \n")))
+a2 = int(float(input("Enter value of a2 \n")))
+b2 = int(float(input("Enter value of b2 \n")))
+a3 = int(float(input("Enter value of a3 \n")))
+b3 = int(float(input("Enter value of b3 \n")))
+#Below x is equation for collinear
+x = a1 * (b2 - b3) + a2 * (b3 - b1) + a3 * (b1 - b2)
+
+d1 = math.sqrt(((a2-a1)**2 + (b2-b1)**2))
+d2 = math.sqrt(((a3-a2)**2 + (b3-b2)**2))
+d3 = math.sqrt(((a1-a3)**2 + (b1-b3)**2))
+
+if d1 + d2 > d3 and d2 + d3 > d1 and d3 + d1 > d3 :
+ if d1 == d2 == d3:
+  print("Triangle is Equilateral")
+ elif d1==d2 or d2==d3 or d3==d1:
+  print("Triangle is Isosceles")
+ else:
+  print("Triangle is Scalene")
+else  :
+  print("This is not triangle")
+
+
+
+
+
